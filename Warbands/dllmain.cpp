@@ -27,7 +27,7 @@ void __fastcall updateTime_H(DWORD_PTR* a1, float a2)
 void OnAttach() {
     warband_init();
     ofstream myfile;
-    myfile.open("C:\\Users\\veniv\\Downloads\\Reversing\\IDA Pro 7.5 SP3(x86, x64, ARM, ARM64, PPC, PPC64, MIPS)\\txt.txt", ios::out);
+    myfile.open("text.txt", ios::out);
     
     if (myfile)
     {
@@ -46,6 +46,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             DetourUpdateThread(GetCurrentThread());
             DetourAttach(&(LPVOID&)updateTime, &updateTime_H);
             DetourTransactionCommit();
+
             hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)OnAttach, NULL, NULL, NULL);
             break;
         case DLL_PROCESS_DETACH:
