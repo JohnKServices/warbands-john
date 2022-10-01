@@ -1,6 +1,6 @@
 #include "warband.h"
 
-wb::game_data *warband = nullptr;
+wb::game_data* warband = nullptr;
 
 void warband_init()
 {
@@ -9,8 +9,8 @@ void warband_init()
 
 	const char* cheatmenu = (const char*)(0x008177BC);
 	cheatmenu = "abcde1234"; // override cheatmenu 
-	
-	warband = (wb::game_data *)(wb::addresses::game_data_ptr);
+
+	warband = (wb::game_data*)(wb::addresses::game_data_ptr);
 }
 
 std::string getTime()

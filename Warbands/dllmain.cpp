@@ -28,10 +28,10 @@ void OnAttach() {
     warband_init();
     ofstream myfile;
     myfile.open("text.txt", ios::out);
-    
+
     if (myfile)
     {
-        myfile << getName();
+        myfile << getTime();
     }
     myfile.close();
 }
@@ -40,20 +40,20 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     static HANDLE hThread;
 
     switch (ul_reason_for_call) {
-        case DLL_PROCESS_ATTACH:
+    case DLL_PROCESS_ATTACH:
 
-            DetourTransactionBegin();
-            DetourUpdateThread(GetCurrentThread());
-            DetourAttach(&(LPVOID&)updateTime, &updateTime_H);
-            DetourTransactionCommit();
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
+        DetourAttach(&(LPVOID&)updateTime, &updateTime_H);
+        DetourTransactionCommit();
 
-            hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)OnAttach, NULL, NULL, NULL);
-            break;
-        case DLL_PROCESS_DETACH:
-            if (hThread) {
-                TerminateThread(hThread, 0);
-            }
-            break;
+        hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)OnAttach, NULL, NULL, NULL);
+        break;
+    case DLL_PROCESS_DETACH:
+        if (hThread) {
+            TerminateThread(hThread, 0);
+        }
+        break;
     }
     return TRUE;
 }
