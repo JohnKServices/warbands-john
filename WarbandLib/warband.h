@@ -1,4 +1,5 @@
 #pragma once
+#include <Windows.h>
 #include <detours/detours.h>
 
 #include "rgl.h"
