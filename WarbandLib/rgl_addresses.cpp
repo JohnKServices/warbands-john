@@ -22,16 +22,16 @@ unsigned int addresses::mesh_CreateUniqueVertexData = 0x0041C0E0;
 unsigned int addresses::skeleton_GetBonePosition = 0x004A92E0;
 
 //unsigned int addresses::scene_GetGroundData = 0x00437660;
-unsigned int addresses::scene_GetGroundData = 0x00429D90;
+unsigned int addresses::scene_GetGroundData = 0x00429DB0;
 
 //unsigned int addresses::CheckIntersection = 0x00417CF0;
 unsigned int addresses::CheckIntersection = 0x00413D80;
 
 //unsigned int addresses::scene_GetBodyPartsInPath = 0x00448740;
-unsigned int addresses::scene_GetBodyPartsInPath = 0x004359F0;
+unsigned int addresses::scene_GetBodyPartsInPath = 0x00435A10;
 
 //unsigned int addresses::capsule_Ctor = 0x00447E00;
-unsigned int addresses::capsule_Ctor = 0x004350A0;
+unsigned int addresses::capsule_Ctor = 0x004350C0;
 #elif defined WARBAND_STEAM
 unsigned int addresses::New = 0x00678FE4;
 unsigned int addresses::Delete = 0x00678964;

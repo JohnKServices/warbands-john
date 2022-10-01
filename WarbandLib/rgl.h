@@ -127,12 +127,12 @@ void assert_size(unsigned int size_warband, unsigned int size_warband_dedicated,
 		expected = size_steam;
 #endif
 
-	if (expected == -1 || (expected > 0 && sizeof(T) == expected))
-		return;
+	//if (expected == -1 || (expected > 0 && sizeof(T) == expected))
+	//	return;
 
 	char buffer[512];
 
 	sprintf_s(buffer, "Type %s: expected size %d, got %d.\nKABOOM!", typeid(T).name(), expected, sizeof(T));
-	//MessageBox(nullptr, buffer, "Critical error", MB_ICONERROR);
+	MessageBox(nullptr, buffer, "Critical error", MB_ICONERROR);
 	exit(1);
 }

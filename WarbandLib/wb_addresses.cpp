@@ -6,7 +6,7 @@ using namespace wb;
 //unsigned int addresses::operation_Execute_jumptable = 0x0057A510;
 //unsigned int addresses::operation_Execute_entry = 0x0057A47C;
 //unsigned int addresses::operation_Execute_exit_1 = 0x0057A4A9;
-unsigned int addresses::operation_Execute_jumptable = 0x00536D28;
+unsigned int addresses::operation_Execute_jumptable = 0x005193EF;
 unsigned int addresses::operation_Execute_entry = 0x00536C94;
 unsigned int addresses::operation_Execute_exit_1 = 0x00536CC1;
 unsigned int addresses::operation_Execute_exit_2 = operation_Execute_entry + 8;
@@ -25,7 +25,7 @@ unsigned int addresses::activate_entry = 0x005A68F2;
 unsigned int addresses::ReadModuleFiles_entry = 0x006157D1;
 
 //unsigned int addresses::game_ReadModuleFiles_entry = 0x006688CE;
-unsigned int addresses::game_ReadModuleFiles_entry = 0x006176EE;
+unsigned int addresses::game_ReadModuleFiles_entry = 0x00616680;
 
 unsigned int addresses::ParseConsoleCommand_entry = 0;
 unsigned int addresses::ParseConsoleCommand_exit_1 = 0;
@@ -34,7 +34,7 @@ unsigned int addresses::ParseConsoleCommand_exit_2 = 0;
 unsigned int addresses::ExecuteConsoleCommand_entry = 0;
 
 //unsigned int addresses::Save_entry = 0x00606612;
-unsigned int addresses::Save_entry = 0x0054ECA6;
+unsigned int addresses::Save_entry = 0x0054E940;
 
 unsigned int addresses::LoadSave_entry = 0x00617B3C;
 unsigned int addresses::LoadSave_exit = LoadSave_entry + 5;
