@@ -6,7 +6,7 @@ using namespace rgl;
 //unsigned int addresses::New = 0x00682814;
 unsigned int addresses::New = 0x0062BA96;
 //unsigned int addresses::Delete = 0x00682194;
-unsigned int addresses::Delete = 0x0062B2B9;
+unsigned int addresses::Delete = 0x0062B2E9;
 
 //unsigned int addresses::window_manager_DisplayMessage = 0x00490700;
 unsigned int addresses::window_manager_DisplayMessage = 0x00462430;

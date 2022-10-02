@@ -1,5 +1,6 @@
 #pragma once
 #include <Windows.h>
+#include <fstream>
 #include <detours/detours.h>
 
 #include "rgl.h"
@@ -7,7 +8,7 @@
 
 extern wb::game_data* warband;
 
-void warband_init();
+bool warband_init();
 
 void __fastcall updateTime_H(DWORD_PTR* a1, float a2);
 
